@@ -1,0 +1,33 @@
+{
+	"meta":[{
+		"creator":"clayton fussell",
+		"dateCreated":"17/12/2014",
+		"version":"1.0"
+
+	}],
+	"data":[{
+		"id":1,
+		"tense":"PI",
+		"name":{
+			"pt":"falar",
+			"en":"speak"
+		},
+		"conjugation":{
+			"formPt":"eu",
+			"formEn":"I",
+			"value":"falo"
+		},
+		"audio":{
+			"url":"http://www.audiotestfiles.com/falar-pi-eu.mp3",
+			"length":"3:14",
+			"quality":"great"
+		},
+		"playlist":{
+			"partOfList":"true",
+			"name":"playlist1"
+		},
+		"practice":{
+			"required":"true"
+		}
+	}]
+}
