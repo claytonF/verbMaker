@@ -1,1 +1,129 @@
 /* new css file */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700);
+@import url(http://fonts.googleapis.com/css?family=Francois+One);
+
+@font-face {
+  font-family: 'Francois One', sans-serif;
+}
+
+
+body, html {
+	background-color: #56CFEE;
+	 font-family: 'Francois One', sans-serif;
+  	font-size: 14px;
+  	line-height: 1.2;
+  	color: #3B3738;
+}
+
+.nav-bar {
+	padding: 10px;
+	
+
+
+}
+.nav-bar h1 {
+	display: inline-block;
+	border-bottom: 3px solid #4EA7BA;
+	
+	color: #4EA7BA;
+	
+	
+	font-size: 40px;
+	font-style: italic;
+	
+}
+.verb {
+	width: 250px;
+	height: 350px;
+	margin: 10px;
+	position: relative;
+	display: block;
+	float: left;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	display: none;
+
+
+
+}
+
+
+.verb-face {
+	width: 250px;
+	height: 350px;
+	position: absolute;
+	top: 0px;
+	left:0px;
+	background-color: #fff;
+	padding: 10px;
+	box-sizing: border-box;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: transform 1.2s;
+	-moz-transition: transform 1.2s;
+	transition: transform 1.2s;
+	-moz-box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+	box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+}
+
+
+.verb-face h1 {
+	font-style: italic;
+	font-size: 40px;
+	color: #3B3738;
+}
+.verb-face .conjugation {
+	margin: 20px 0 0 0;
+}
+.verb-face .conjugation ul {
+	padding: 10px 0;
+	/*border-top: 1px solid #CFC7C0;
+	border-bottom: 1px solid #CFC7C0; */
+}
+.verb-face .conjugation ul li {
+	margin: 0 0 10px 0;
+}
+.verb-face .conjugation ul li .conj-form {
+	min-width: 60px;
+	display: inline-block;
+}
+.verb-face .conjugation ul li a {
+	overflow: hidden;
+
+}
+
+.verb-face .conjugation ul li a .speaker {
+	width:20px;
+	height: 20px;
+	opacity: 0.2;
+	margin: 0 0 3px 5px;
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s; 
+	transition: opacity 0.5s;	
+}
+.verb-face footer a {
+	
+	border: 0px;
+	color: #3B3738;
+	padding: 5px;
+	display: inline-block;
+	margin: 5px 0 0 0;
+
+	font-weight: lighter;
+}
+
+.verb-face .conjugation ul li a .speaker:hover {
+	opacity: 1;
+}
+
+.verb-back {
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+
+

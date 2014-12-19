@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+ 
+        <script src="js/libs/modernizr-2.6.2.min.js"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="nav-bar">
+            <h1>VerbLearner</h1>
+        </header>        
+        
+
+        <script id="verbTemplate" type="text/x-handlebars-template">
+            {{#each this}}
+            <div class="verb">
+               <article class="verb-face verb-front">
+                    <header>
+                        <h1>{{name.pt}}</h1>
+                        <h2>(to {{name.en}})</h2>
+                        <h3>{{tense.name}}</h3>
+                    </header>
+                    <section class="conjugation">
+                       <ul>
+                        {{#each tense.conjugation}}
+                            <li><span class="conj-form">{{formPt}}:</span><span class="conj-value"> {{value}}</span><a href="{{audio/url}}"><img src="images/speaker_icon.svg" class="speaker" /></a></li>
+                        {{/each}}
+                        </ul>
+                        
+                    </section>
+                    <footer>
+                        <a href="#" class="flipper">take test(flip card)</a>
+                    </footer>
+                </article>
+                <article class="verb-face verb-back">
+                    <header>
+                        <h1>{{name.pt}}</h1>
+                        <h2>to {{name.en}}</h2>
+                        <h3>{{tense.name}}</h3>
+                    </header>
+                    <section class="timer"></section>
+                    <section class="conjugation">
+                        <ul>
+                        {{#each tense.conjugation}}
+                            <li><span class="conj-form">{{formPt}}</span> <input id="{{name.pt}}{{formPt}}" /></li>
+                        {{/each}}
+                        </ul>
+                        </ul>
+                    </section>
+                    <footer>
+                        <a href="#" class="flipped">Get the results</a>
+                    </footer>
+
+                </article>
+            </div>
+            {{/each}}
+        </script>
+
+
+        
+
+
+
+
+        <script src="js/libs/jquery-1.11.2.min.js"></script>
+        <script src="js/libs/handlebars-v2.0.0.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
