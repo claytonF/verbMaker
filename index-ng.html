@@ -77,64 +77,7 @@
                 </div>
             </div>
         </div>
-       
-
-
-           
-        
-
-        <script id="verbTemplate" type="text/x-handlebars-template">
-            {{#each this}}
-            <div class="verb">
-               <article class="verb-face verb-front">
-                    <header>
-                        <h1>{{name.pt}}</h1>
-                        <h2>(to {{name.en}})</h2>
-                        <h3>{{tense.name}}</h3>
-                    </header>
-                    <section class="conjugation">
-                       <ul>
-                        {{#each tense.conjugation}}
-                            <li><span class="conj-form">{{formPt}}:</span><span class="conj-value"> {{value}}</span><a href="{{audio.url}}"><img src="images/speaker_icon.svg" class="speaker" /></a></li>
-                        {{/each}}
-                        </ul>
-                        
-                    </section>
-                    <footer>
-                        <a href="#" class="flipper">take test(flip card)</a>
-                    </footer>
-                </article>
-                <article class="verb-face verb-back">
-                    <header>
-                        <h1>{{name.pt}}</h1>
-                        <h2>(to {{name.en}})</h2>
-                        <h3>{{tense.name}}</h3>
-                    </header>
-                    <section class="timer"></section>
-                    <section class="conjugation">
-                        <ul>
-                        {{#each tense.conjugation}}
-                            <li><span class="conj-form">{{formPt}}</span> <input id="{{name.pt}}{{formPt}}" /></li>
-                        {{/each}}
-                        </ul>
-                        </ul>
-                    </section>
-                    <footer>
-                        <a href="#" class="flipped">Get the results</a>
-                    </footer>
-
-                </article>
-            </div>
-            {{/each}}
-        </script>
-
-
-        
-
-
-
-
-        
+ 
         
         <script src="js/libs/handlebars.js"></script>
         <script src="js/main.js"></script>

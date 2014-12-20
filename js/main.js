@@ -13,7 +13,9 @@
 
 $(document).on('ready',function(){
 	
-
+function aTest() {
+	console.log('test');
+}
 
 
 	
